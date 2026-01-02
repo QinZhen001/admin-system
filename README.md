@@ -1,2 +1,4 @@
-# admin-system
-全栈后台管理系统
+
+# typeorm
+
+这个分支用来练习 typeorm demo
