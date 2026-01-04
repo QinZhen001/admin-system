@@ -184,7 +184,8 @@ export class UserController {
   advancedSearch = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const options = {
-        isActive: req.query.isActive === 'true' ? true : req.query.isActive === 'false' ? false : undefined,
+        isActive:
+          req.query.isActive === 'true' ? true : req.query.isActive === 'false' ? false : undefined,
         minAge: req.query.minAge ? parseInt(req.query.minAge as string, 10) : undefined,
         maxAge: req.query.maxAge ? parseInt(req.query.maxAge as string, 10) : undefined,
         roleNames: req.query.roleNames ? (req.query.roleNames as string).split(',') : undefined,

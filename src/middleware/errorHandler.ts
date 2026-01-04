@@ -70,19 +70,13 @@ export const errorHandler = (
   }
 
   // Handle common operational errors
-  if (
-    err.message.includes('not found') ||
-    err.message.includes('Not found')
-  ) {
+  if (err.message.includes('not found') || err.message.includes('Not found')) {
     statusCode = 404;
     message = err.message;
     isOperational = true;
   }
 
-  if (
-    err.message.includes('already exists') ||
-    err.message.includes('Already exists')
-  ) {
+  if (err.message.includes('already exists') || err.message.includes('Already exists')) {
     statusCode = 409;
     message = err.message;
     isOperational = true;
